@@ -4,10 +4,6 @@ import React, { useEffect, useInsertionEffect, useState } from 'react';
 import ProjectItems from '../components/ProjectItems';
 
 function ProjectstabView(props) {
-    useEffect(() => {
-        remove_and_add_hidden_class('api', true);
-
-    });
 
     let list_of_projects_items = [
         {

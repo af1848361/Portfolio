@@ -47,7 +47,7 @@ function PortfolioNavbar(props) {
             <nav className="bg-white dark:bg-black items-center shadow-sm dark:shadow-xl shadow-slate-500 dark:shadow-blue-900">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4 px-3 ">
                     <a href="" className='flex items-center justify-center space-x-3 rtl:space-x-reverse'>
-                        <img src="/src/assets/Logo.png" alt="" className='h-8 dark:bg-white rounded-xl' />
+                        <img src="./src/assets/Logo.png" alt="" className='h-8 dark:bg-white rounded-xl' />
                         <span className='self-center text-xl font-semibold dark:text-white'>
                             Portfolio.
                         </span>

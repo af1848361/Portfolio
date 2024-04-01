@@ -6,7 +6,7 @@ function HometabView(props) {
             <div id="home" className='my-1 dark:bg-black py-9 md:py-28 flex justify-center shadow-sm dark:shadow-xl shadow-slate-500 dark:shadow-blue-800'>
                 <div className="flex flex-col md:flex-row py-2">
                     <div className='px-4 py-1 grid justify-items-center'>
-                        <img className='rounded-full shadow-lg shadow-slate-600 dark:shadow-blue-600 size-80' src='../src/assets/batman profile.jpg' />
+                        <img className='rounded-full shadow-lg shadow-slate-600 dark:shadow-blue-600 size-80' src='./src/assets/batman_profile.jpg' />
                     </div>
 
                     <div className='self-center px-4 py-5 grid justify-items-center mt-4'>

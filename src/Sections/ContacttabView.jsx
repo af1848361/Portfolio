@@ -45,7 +45,7 @@ function ContacttabView(props) {
                                 </div>
                                 <div className="md:col-span-7 sm:col-span-6 col-span-8 text-start md:ps-2 sm:ps-2">
                                     <h2 className=' font-semibold dark:text-white text-xl' >Sialkot, Punjab</h2>
-                                    <p className='text-sm dark:text-white -mt-1'>I am Currently Living in College Road <span className='underline text-gray-700 dark:text-blue-800'>Daska</span>.</p>
+                                    <p className='text-sm dark:text-white -mt-1'>I am Currently Living on College Road <span className='underline text-gray-700 dark:text-blue-800'>Daska</span>.</p>
                                 </div>
                             </div>
                         </div>

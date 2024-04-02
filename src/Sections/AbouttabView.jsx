@@ -49,7 +49,7 @@ function AbouttabView(props) {
                                             </p>
                                         </div>
 
-                                        <p className='dark:text-white font-light  text-left'>Board of Intermediate Gujrawala</p>
+                                        <p className='dark:text-white font-light  text-left'>Board of Intermediate Gujranwala</p>
                                         <p className='font-semibold text-left text-gray-800 dark:text-slate-400 text-sm'>Grade D</p>
                                     </li>
                                     <li className='font-semibold text-xl'>
@@ -61,7 +61,7 @@ function AbouttabView(props) {
                                                 July 2015
                                             </p>
                                         </div>
-                                        <p className='dark:text-white font-light  text-left'>Board of Intermediate Gujrawala</p>
+                                        <p className='dark:text-white font-light  text-left'>Board of Intermediate Gujranwala</p>
                                         <p className='font-semibold text-left text-gray-800 dark:text-slate-400 text-sm'>Grade D</p>
                                     </li>
                                 </ul>
@@ -97,7 +97,7 @@ function AbouttabView(props) {
                                         <p className='dark:text-white font-light  text-left'>
                                             <span className='font-medium'>Job Title: </span>
                                             Receptionist</p>
-                                        <p className='font-semibold text-left text-gray-800 dark:text-slate-400 text-sm'>Attending the Calls of the Customer, Set the meeting between Broker And Customer.. These Kind of Work i used to do there. </p>
+                                        <p className='font-semibold text-left text-gray-800 dark:text-slate-400 text-sm'>Attending the Calls of the Customer, Set the meeting between Broker And Customer.</p>
                                     </li>
                                     <li className='font-semibold text-xl'>
                                         <div className="grid grid-col-2  sm:gap-0 md:gap-4 xl:gap-0">
@@ -120,7 +120,7 @@ function AbouttabView(props) {
                                                 2017
                                             </p>
                                         </div>
-                                        <p className='dark:text-white font-light  text-left'>Gujrawala Tools, Dies and Moulds Center (GTDMC)</p>
+                                        <p className='dark:text-white font-light  text-left'>Gujranwala Tools, Dies and Moulds Center (GTDMC)</p>
                                     </li>
                                 </ul>
                             </div>

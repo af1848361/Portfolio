@@ -1,7 +1,9 @@
 import React from 'react';
 
 function Each_name_and_color({ name, color, col_span = "col-span-1" }) {
-    let clas_names = "border text-center px-4 py-1 rounded-xl font-semibold text-white shadow grid place-content-center";
+    let clas_names = `text-sm px-4 py-1 text-center font-semibold rounded-lg border-2
+    border-black hover:text-white
+    dark:border-white dark:text-white  dark:hover:text-black `;
     function add_space_to_class() {
         clas_names += " ";
     };

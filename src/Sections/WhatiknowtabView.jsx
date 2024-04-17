@@ -8,22 +8,22 @@ function WhatiknowtabView(props) {
     let front_end_list = [
         {
             name: "HTML",
-            color: " bg-orange-400",
+            color: " hover:bg-orange-400",
             col_span: "",
         },
         {
             name: "CSS",
-            color: " bg-sky-500",
+            color: " hover:bg-sky-500",
             col_span: "",
         },
         {
             name: "JS",
-            color: " bg-yellow-400",
+            color: " hover:bg-yellow-400",
             col_span: "",
         },
         {
             name: "React JS",
-            color: " bg-sky-600",
+            color: " hover:bg-sky-600",
             col_span: "col-span-3 ",
         },
 
@@ -32,17 +32,17 @@ function WhatiknowtabView(props) {
     let back_end_list = [
         {
             name: "Python",
-            color: "bg-gradient-to-r from-blue-500 from-50% to-yellow-400 to-50%",
+            color: "hover:bg-gradient-to-r from-blue-500 from-50% to-yellow-400 to-50%",
             col_span: "",
         },
         {
             name: "Flask",
-            color: " bg-gradient-to-r from-sky-300 from-50% to-gray-400 to-50% ",
+            color: " hover:bg-gradient-to-r from-sky-300 from-50% to-gray-400 to-50% ",
             col_span: "",
         },
         {
             name: "Django",
-            color: " bg-green-400",
+            color: " hover:bg-green-400",
             col_span: "",
         },
 
@@ -52,17 +52,17 @@ function WhatiknowtabView(props) {
     let auto_list = [
         {
             name: "Selenium",
-            color: " bg-gray-600",
+            color: " hover:bg-gray-600",
             col_span: "",
         },
         {
             name: "BS4",
-            color: "bg-blue-500",
+            color: "hover:bg-blue-500",
             col_span: "",
         },
         {
             name: "Data Analysis",
-            color: "bg-gradient-to-r from-blue-500 via-yellow-400 to-gray-500",
+            color: "hover:bg-gradient-to-r from-blue-500 via-yellow-400 to-gray-500",
             col_span: "col-span-3 md:col-span-1 ",
         },
 

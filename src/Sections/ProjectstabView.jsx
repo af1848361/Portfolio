@@ -1,9 +1,13 @@
 
-import React, { useEffect, useInsertionEffect, useState } from 'react';
+import React, { useEffect, useInsertionEffect, useLayoutEffect, useState } from 'react';
 
 import ProjectItems from '../components/ProjectItems';
 
 function ProjectstabView(props) {
+    useEffect(() => {
+        console.log('ProjectstabView mounted');
+        remove_and_add_hidden_class("api",);
+    });
 
     let list_of_projects_items = [
         {
@@ -11,12 +15,12 @@ function ProjectstabView(props) {
             'number_of_project': 5,
             'describtion': "API's Developed in Flask & Django.",
             "id": "api",
-            'non-hidden': true,
+            'non-hidden': false,
         },
         {
             'name': "Selenium Bot",
             'number_of_project': 4,
-            'describtion': "Web Scraper & Web Crawler. What's App Automate.",
+            'describtion': "Web Scraper & Web Crawler. What'sApp Automate.",
             'id': 'selenium',
             'non-hidden': false,
 
@@ -80,8 +84,8 @@ function ProjectstabView(props) {
                                         <li className=''>
                                             <h1 className='font-semibold inline-flex'>YouTube Downloader Using Flask.</h1>
                                             <p>
-                                                I Use the Flask  Framework of Python to develop API. Which Can Download the YouTube Videos as well as the Hole Playlist.
-                                                In this project i use some libraries. Like Yt-dlp  for downloading video from youtube. The Front End of this Project was built on the React js.
+                                                I use the flask  Framework of Python to develop API. Which can download the YouTube videos as well as the hole Playlist.
+                                                In this project i use some libraries. Like Yt-dlp  for downloading video from youtube. The front-End of this Project was built on the React js.
                                             </p>
                                             <h1 className='font-semibold'>Video:</h1>
                                             <div className='grid justify-center'>
@@ -97,13 +101,13 @@ function ProjectstabView(props) {
                                         <li className='py-2'>
                                             <h1 className='font-semibold inline-flex' >Sharing Files From Laptop to Mobile</h1>
                                             <p>
-                                                In This Project the file which is available on the laptop can be Download on the other Devies (like: Mobile or Another laptop). As Long as Both Devieses are Connected with the same Network.
+                                                In this Project the file which is available on the laptop can be download on the other devies (like: Mobile or Another laptop). As long as both devieses are connected with the same network.
                                             </p>
                                         </li>
                                         <li className='py-2'>
                                             <h1 className='font-semibold inline-flex' >Weekly Schedule</h1>
                                             <p>
-                                                I used this Api to make my Weekly Schedule. Moslty or you can say the main functionality was writen in JS. On the Click on the Submit Button the the data will be store in the variable the data type of that variable is dict. After reciving that variable that data will be store in a Json File.
+                                                I used this Api to make my Weekly Schedule. Main functionality was writen in JS. On the click on the submit button the the data will be store in the variable the data type of that variable is dict. After reciving from the frontend that data will be store in a Json File.
                                             </p>
                                         </li>
                                         <li className='py-2'>
@@ -119,9 +123,9 @@ function ProjectstabView(props) {
                                 <div id='selenium-detail' className='py-2 '>
                                     <ul className='list-inside list-disc'>
                                         <li className=''>
-                                            <h1 className='font-semibold inline-flex'>What's App Bot</h1>
+                                            <h1 className='font-semibold inline-flex'>What'sApp Bot</h1>
                                             <p>
-                                                I Used This Bot to send messages on what's app for Real Estate to reach the client. It is written using Python and Selenium.It can Send messages to selected Range with diffrent Mobile Numbers.The Company Provied me the List and i have to Complete it End of the Weak. I do this work for <span className='font-semibold underline'>Royal Homes Real Estate.</span>
+                                                I Used This Bot to send messages on what'sapp for Real Estate to reach the client. It is written using Python and Selenium.It can Send messages to selected Range with diffrent Mobile Numbers.The Company Provied me the List and i have to Complete it End of the Weak. I do this work for <span className='font-semibold underline'>Royal Homes Real Estate.</span>
                                             </p>
                                         </li>
 

@@ -1,13 +1,15 @@
-import { useState } from 'react'
-import Profile from './pages/Profile'
-function App() {
-  const [count, setCount] = useState(0)
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/home";
+import { routes } from "./utilities";
 
-  return (
-    <>
-      <Profile />
-    </>
-  )
+function App() {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path={routes.home} element={<Home />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
-export default App
+export default App;

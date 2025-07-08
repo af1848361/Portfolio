@@ -1,7 +1,6 @@
 import useHooks from "./hooks";
-import ProfilePic from "../../assets/ProfilePic.png";
+import ProfilePic from "../../assets/ProfilePic.webp";
 import Resume from "../../assets/resume/Syed Gohar Ali Naqvi CV.pdf";
-import LogoPic from "../../assets/Logo.png";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { ShowCaseContainer, Spacer } from "../../components";

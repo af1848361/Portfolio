@@ -40,51 +40,51 @@ export default function useHooks() {
     () => [
       {
         skill: "Java Script",
-        icon: <FaJs color="#FFCA28" />,
+        icon: <FaJs color='#FFCA28' />,
       },
       {
         skill: "Type script",
-        icon: <SiTypescript color="#3178c6" />,
+        icon: <SiTypescript color='#3178c6' />,
       },
       {
         skill: "React native",
-        icon: <FaReact color="#61dafb" />,
+        icon: <FaReact color='#61dafb' />,
       },
       {
         skill: "Api integration",
-        icon: <TbApi color="#4CAF50" />,
+        icon: <TbApi color='#4CAF50' />,
       },
       {
         skill: "redux",
-        icon: <SiRedux color="#764abc" />,
+        icon: <SiRedux color='#764abc' />,
       },
       {
         skill: "Firebase",
-        icon: <FaFire color="#FFCA28" />,
+        icon: <FaFire color='#FFCA28' />,
       },
       {
         skill: "Node.js",
-        icon: <SiNodedotjs color="#68a063" />,
+        icon: <SiNodedotjs color='#68a063' />,
       },
       {
         skill: "Python",
-        icon: <SiPython color="#3776ab" />,
+        icon: <SiPython color='#3776ab' />,
       },
       {
         skill: "Selenium",
-        icon: <SiSelenium color="#43B02A" />,
+        icon: <SiSelenium color='#43B02A' />,
       },
       {
         skill: "Flask",
-        icon: <SiFlask color="black" />,
+        icon: <SiFlask color='black' />,
       },
       {
         skill: "responsive design",
-        icon: <FaMobile color="#2196F3" />,
+        icon: <FaMobile color='#2196F3' />,
       },
       {
         skill: "ui/ux principles",
-        icon: <FaPalette color="#FF4081" />,
+        icon: <FaPalette color='#FF4081' />,
       },
     ],
     []
@@ -92,11 +92,13 @@ export default function useHooks() {
 
   const List_Of_Repons_In_Balawal_IT = useMemo(
     () => [
-      "Developed React Native mobile applications with clean, modular components",
-      "Integrated backend APIs with React Native frontend",
-      "Implemented Firebase Authentication and Firestore database",
-      "Optimized UI/UX across multiple devices through iterative feedback",
-      "Resolved logic issues and ensured code maintainability",
+      "Developed high-quality, cross-platform mobile applications using React Native, with a strong focus on responsive design and user experience across various devices.",
+      "Built clean, modular, and reusable UI components, adhering to modern software engineering principles and React Native best practices.",
+      "Integrated RESTful APIs and backend services into the frontend architecture, working collaboratively with cross-functional teams including designers, backend developers, and QA engineers.",
+      "Wrote efficient, maintainable, and scalable code while following industry-standard coding conventions and participating in peer code reviews.",
+      "Diagnosed, debugged, and resolved UI/UX issues and logic errors to maintain a smooth and responsive user interface.",
+      "Implemented Firebase Authentication to manage secure user sign-in and access control.",
+      "Utilized Firestore Database for real-time data synchronization and reliable storage solutions within the app ecosystem.",
     ],
     []
   );

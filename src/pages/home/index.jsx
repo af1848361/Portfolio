@@ -1,6 +1,6 @@
 import useHooks from "./hooks";
 import ProfilePic from "../../assets/ProfilePic.webp";
-import Resume from "../../assets/resume/Syed Gohar Ali Naqvi CV.pdf";
+import Resume from "../../assets/resume/Syed Gohar Ali Naqvi_.pdf";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { ShowCaseContainer, Spacer } from "../../components";
@@ -67,6 +67,14 @@ export default function index() {
               className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full transition-colors"
             >
               <FaLinkedin /> LinkedIn
+            </a>
+            <a
+              href="https://github.com/af1848361"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-gray-950 hover:bg-black px-6 py-3 rounded-full transition-colors"
+            >
+              <FaGithub /> Github
             </a>
             <a
               href={Resume}
@@ -200,8 +208,8 @@ export default function index() {
             SecondVariant={containerVariants}
             JobTitle={"React Native Developer"}
             CompanyName={" Balawal IT House"}
-            Start={"Jan 2024"}
-            End={"May 2025"}
+            Start={"Aug 2024"}
+            End={"Currently"}
             ListOfResposibilities={List_Of_Repons_In_Balawal_IT}
           />
           <Spacer isBasic />
@@ -224,7 +232,8 @@ export default function index() {
               "Bachelor of Science in Business & Information Technology"
             }
             CompanyName={"Virtual University"}
-            End={"Expected April 2027"}
+            Start={"Sep 2020"}
+            End={"Jul 2024"}
             ListOfResposibilities={bbitTopics}
             EducationPart
           />

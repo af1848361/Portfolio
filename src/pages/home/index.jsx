@@ -54,32 +54,34 @@ export default function index() {
           className="text-center z-10 max-w-3xl"
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
-            SYED GOHAR ALI NAQVI
+            SYED GOHAR ALI
+            <br className="md:hidden" />
+            NAQVI
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-blue-300">
             React Native Developer | Mobile App Developer | Frontend Engineer
           </p>
-          <div className="flex justify-center gap-4  mb-12">
+          <div className="flex flex-wrap justify-center items-center gap-4 mb-12">
             <a
               href="https://www.linkedin.com/in/syed-gohar-ali-naqvi-107953361 "
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full transition-colors"
+              className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 h-12 rounded-full transition-colors whitespace-nowrap"
             >
-              <FaLinkedin /> LinkedIn
+              <FaLinkedin size={18} /> LinkedIn
             </a>
             <a
               href="https://github.com/af1848361"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-gray-950 hover:bg-black px-6 py-3 rounded-full transition-colors"
+              className="flex items-center justify-center gap-2 bg-gray-950 hover:bg-black px-6 h-12 rounded-full transition-colors whitespace-nowrap"
             >
-              <FaGithub /> Github
+              <FaGithub size={18} /> Github
             </a>
             <a
               href={Resume}
               download
-              className="flex items-center gap-2 border border-purple-500 hover:bg-purple-500 px-6 py-3 rounded-full transition-colors"
+              className="flex items-center justify-center gap-2 border border-purple-500 hover:bg-purple-500 px-6 h-12 rounded-full transition-colors whitespace-nowrap"
             >
               Download Resume
             </a>

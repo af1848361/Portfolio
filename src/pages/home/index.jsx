@@ -142,7 +142,7 @@ export default function index() {
 
             {/* Paragraph 3 */}
             <motion.p variants={itemVariants}>
-              Currently pursuing a{" "}
+              Recently graduated with a{" "}
               <span className="font-bold text-blue-400">
                 Bachelor's in Business & Information Technology
               </span>

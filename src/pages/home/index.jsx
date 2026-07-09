@@ -1,101 +1,36 @@
+import { useEffect } from "react";
 import useHooks from "./hooks";
-import ProfilePic from "../../assets/ProfilePic.webp";
-import Resume from "../../assets/resume/Syed Gohar Ali Naqvi_.pdf";
+import { usePortfolioContent } from "../../content";
 import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
-import { ShowCaseContainer, Spacer } from "../../components";
-import { IoLogoWhatsapp } from "react-icons/io";
+import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { ShowCaseContainer, Spacer, RichText, HeroSection } from "../../components";
 import { CiLocationOn } from "react-icons/ci";
 
 export default function index() {
-  const {
-    itemVariants,
-    containerVariants,
-    skills,
-    List_Of_Repons_In_Balawal_IT,
-    bbitTopics,
-  } = useHooks();
+  const { itemVariants, containerVariants } = useHooks();
+  const { content, skills, heroLinks, projects } = usePortfolioContent();
+
+  useEffect(() => {
+    document.title = content.meta.pageTitle;
+  }, [content.meta.pageTitle]);
+
+  const buildMailtoLink = () => {
+    const subject = encodeURIComponent(content.contact.emailSubject);
+    const body = encodeURIComponent(content.contact.emailBody);
+    return `mailto:${content.contact.email}?subject=${subject}&body=${body}`;
+  };
 
   return (
     <div className="bg-gray-900 text-white ">
-      {/* Hero Section */}
-      <section className="h-full min-h-screen flex items-center justify-center relative overflow-hidden px-4">
-        <div className="">
-          {/* the Image Container */}
-          <motion.div
-            initial={{ y: 0, opacity: 0 }}
-            animate={{ y: -100, opacity: 1 }}
-            transition={{ duration: 2 }}
-            className="absolute w-60 h-60 left-1/2 top-1/2 -translate-1/2"
-          >
-            <motion.img
-              animate={{
-                rotate: "1turn",
-                scale: [1, 1.5, 1],
-                borderRadius: ["6%", "75%", "150%"],
-                boxShadow: [
-                  "0px 0px 10px rgba(255, 255, 255, 0.2)",
-                  "0px 0px 20px rgba(255, 255, 255, 0.5)",
-                  "0px 0px 30px rgba(255, 255, 255, 0.8)",
-                  "0px 0px 40px rgba(255, 255, 255, 1)",
-                ],
-              }}
-              transition={{ duration: 1.5 }}
-              src={ProfilePic}
-              alt="Profile"
-              className="w-60 h-60 "
-            />
-          </motion.div>
-        </div>
-        <motion.div
-          initial={{ y: 400, opacity: 0 }}
-          animate={{ y: 200, opacity: 1 }}
-          transition={{ duration: 4 }}
-          className="text-center z-10 max-w-3xl"
-        >
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
-            SYED GOHAR ALI
-            <br className="md:hidden" />
-            NAQVI
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-blue-300">
-            React Native Developer | Mobile App Developer | Frontend Engineer
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-4 mb-12">
-            <a
-              href="https://www.linkedin.com/in/syed-gohar-ali-naqvi-107953361 "
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 h-12 rounded-full transition-colors whitespace-nowrap"
-            >
-              <FaLinkedin size={18} /> LinkedIn
-            </a>
-            <a
-              href="https://github.com/af1848361"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-gray-950 hover:bg-black px-6 h-12 rounded-full transition-colors whitespace-nowrap"
-            >
-              <FaGithub size={18} /> Github
-            </a>
-            <a
-              href={Resume}
-              download
-              className="flex items-center justify-center gap-2 border border-purple-500 hover:bg-purple-500 px-6 h-12 rounded-full transition-colors whitespace-nowrap"
-            >
-              Download Resume
-            </a>
-          </div>
-        </motion.div>
-      </section>
-      {/* About Section */}
+      <HeroSection />
+
       <section id="about" className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <motion.h2
             variants={itemVariants}
             className="text-3xl font-bold mb-8 text-center"
           >
-            About Me
+            {content.about.title}
           </motion.h2>
 
           <motion.div
@@ -105,75 +40,22 @@ export default function index() {
             viewport={{ once: true }}
             className="space-y-6 text-lg leading-relaxed"
           >
-            {/* Paragraph 1 */}
-            <motion.p variants={itemVariants}>
-              <span className="font-bold">Hello!</span> I'm{" "}
-              <span className="font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Syed Gohar Ali Naqvi
-              </span>
-              , a motivated and adaptable{" "}
-              <span className="font-bold text-blue-400">
-                React Native Developer
-              </span>{" "}
-              passionate about crafting intuitive and high-performance mobile
-              applications. With hands-on experience in the field, I specialize
-              in building scalable and responsive cross-platform solutions that
-              deliver exceptional user experiences.
-            </motion.p>
-
-            {/* Paragraph 2 */}
-            <motion.p variants={itemVariants}>
-              My expertise lies in core React Native development, complemented
-              by strong skills in{" "}
-              <span className="font-bold text-purple-400">API integration</span>
-              , ensuring seamless communication between frontend and backend
-              systems. I have practical experience implementing robust features
-              like{" "}
-              <span className="font-bold text-blue-400">
-                Firebase Authentication
-              </span>{" "}
-              and leveraging{" "}
-              <span className="font-bold text-purple-400">Firestore</span> for
-              efficient, real-time data management. I am committed to writing
-              clean, modular, and reusable code, adhering to software
-              engineering best practices to ensure maintainability and optimal
-              performance.
-            </motion.p>
-
-            {/* Paragraph 3 */}
-            <motion.p variants={itemVariants}>
-              Recently graduated with a{" "}
-              <span className="font-bold text-blue-400">
-                Bachelor's in Business & Information Technology
-              </span>
-              , I combine a foundational understanding of business principles
-              with strong technical acumen. I pride myself on my{" "}
-              <span className="font-bold text-purple-400">
-                analytical and critical thinking
-              </span>{" "}
-              abilities, which enable me to troubleshoot and resolve complex
-              logic issues effectively.
-            </motion.p>
-
-            {/* Paragraph 4 */}
-            <motion.p variants={itemVariants}>
-              I am eager to contribute my skills to innovative projects and
-              continue growing as a Frontend development professional.{" "}
-              <span className="font-bold text-blue-400">Let's connect</span> and
-              build something great!
-            </motion.p>
+            {content.about.paragraphs.map((paragraph, index) => (
+              <motion.p key={index} variants={itemVariants}>
+                <RichText segments={paragraph.segments} />
+              </motion.p>
+            ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Skills Section */}
       <section id="skills" className=" py-20 bg-gray-800/50  px-4  ">
         <div className="max-w-4xl mx-auto">
           <motion.h2
             variants={itemVariants}
             className="text-3xl font-bold mb-8 text-center"
           >
-            Skills
+            {content.skills.title}
           </motion.h2>
           <motion.div
             variants={containerVariants}
@@ -196,60 +78,125 @@ export default function index() {
         </div>
       </section>
 
-      {/* Experience Section */}
       <section id="experience" className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <motion.h2
             variants={itemVariants}
             className="text-3xl font-bold mb-8 text-center"
           >
-            Experience
+            {content.experience.title}
           </motion.h2>
-          <ShowCaseContainer
-            Mainvariant={itemVariants}
-            SecondVariant={containerVariants}
-            JobTitle={"React Native Developer"}
-            CompanyName={" Balawal IT House"}
-            Start={"Aug 2024"}
-            End={"Currently"}
-            ListOfResposibilities={List_Of_Repons_In_Balawal_IT}
-          />
-          <Spacer isBasic />
+          {content.experience.items.map((item, index) => (
+            <div key={index}>
+              <ShowCaseContainer
+                Mainvariant={itemVariants}
+                SecondVariant={containerVariants}
+                JobTitle={item.title}
+                CompanyName={item.organization}
+                Start={item.startDate}
+                End={item.endDate}
+                ListOfResposibilities={item.highlights}
+              />
+              {index < content.experience.items.length - 1 && <Spacer isBasic />}
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Education Section */}
+      <section id="projects" className="py-20 bg-gray-800/50 px-4">
+        <div className="max-w-4xl mx-auto">
+          <motion.h2
+            variants={itemVariants}
+            className="text-3xl font-bold mb-8 text-center"
+          >
+            {content.projects.title}
+          </motion.h2>
+          {projects.map((project, index) => (
+            <div key={index}>
+              <ShowCaseContainer
+                Mainvariant={itemVariants}
+                SecondVariant={containerVariants}
+                JobTitle={project.title}
+                CompanyName={project.organization}
+                Start={project.startDate ?? ""}
+                End={project.endDate ?? ""}
+                ListOfResposibilities={project.highlights}
+              />
+              {project.storeLinks?.length > 0 && (
+                <motion.div
+                  variants={itemVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  className="flex flex-wrap justify-center gap-4 mt-6"
+                >
+                  {project.storeLinks.map((storeLink) => {
+                    const className =
+                      "flex items-center gap-2 bg-gray-700 hover:bg-gray-600 px-5 py-3 rounded-full text-sm transition-colors cursor-pointer";
+
+                    if (storeLink.url?.trim()) {
+                      return (
+                        <a
+                          key={storeLink.label}
+                          href={storeLink.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={className}
+                        >
+                          {storeLink.icon}
+                          {storeLink.label}
+                        </a>
+                      );
+                    }
+
+                    return (
+                      <span
+                        key={storeLink.label}
+                        className={`${className} cursor-default opacity-70`}
+                      >
+                        {storeLink.icon}
+                        {storeLink.label}
+                      </span>
+                    );
+                  })}
+                </motion.div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section id="education" className="py-20 bg-gray-800 px-4">
         <div className="max-w-4xl mx-auto">
           <motion.h2
             variants={itemVariants}
             className="text-3xl font-bold mb-8 text-center"
           >
-            Education
+            {content.education.title}
           </motion.h2>
-          <ShowCaseContainer
-            Mainvariant={itemVariants}
-            SecondVariant={containerVariants}
-            JobTitle={
-              "Bachelor of Science in Business & Information Technology"
-            }
-            CompanyName={"Virtual University"}
-            Start={"Sep 2020"}
-            End={"Jul 2024"}
-            ListOfResposibilities={bbitTopics}
-            EducationPart
-          />
+          {content.education.items.map((item, index) => (
+            <ShowCaseContainer
+              key={index}
+              Mainvariant={itemVariants}
+              SecondVariant={containerVariants}
+              JobTitle={item.title}
+              CompanyName={item.organization}
+              Start={item.startDate}
+              End={item.endDate}
+              ListOfResposibilities={item.highlights}
+              EducationPart
+            />
+          ))}
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <motion.h2
             variants={itemVariants}
             className="text-3xl font-bold mb-8 text-center"
           >
-            Contact Me
+            {content.contact.title}
           </motion.h2>
 
           <motion.div
@@ -258,61 +205,64 @@ export default function index() {
           >
             <motion.div variants={itemVariants} className="flex flex-col gap-4">
               <a
-                href="mailto:ga741741@gmail.com?subject=Contact%20From%20Portfolio&body=Hi%20Gohar,%0AI%20visited%20your%20portfolio%20and%20wanted%20to%20reach%20out%20to%20you."
+                href={buildMailtoLink()}
                 className="flex flex-row items-center gap-2"
               >
                 <p className="flex items-center gap-2">
-                  <FaEnvelope /> ga741741@gmail.com
+                  <FaEnvelope /> {content.contact.email}
                 </p>
               </a>
 
               <a
-                href="https://wa.me/+923041038639"
+                href={content.contact.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
               >
-                {" "}
                 <FaPhoneAlt />
-                <p className="flex items-center gap-2">+923041038639</p>
+                <p className="flex items-center gap-2">{content.contact.phone}</p>
               </a>
               <p className="flex items-center gap-2">
                 <CiLocationOn size={20} />
-                Daska, Sialkot Pakistan
+                {content.contact.location}
               </p>
             </motion.div>
             <motion.form
               variants={itemVariants}
-              action="https://formspree.io/f/mjkrqyvd"
-              method="POST"
+              action={content.contact.form.action}
+              method={content.contact.form.method}
               className="space-y-4"
             >
-              <input
-                type="text"
-                name="name"
-                placeholder="Your Name"
-                className="w-full p-3 bg-gray-800 rounded"
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                className="w-full p-3 bg-gray-800 rounded"
-                required
-              />
-              <textarea
-                name="message"
-                placeholder="Your Message"
-                rows="4"
-                className="w-full p-3 bg-gray-800 rounded"
-                required
-              />
+              {content.contact.form.fields.map((field) => {
+                if (field.type === "textarea") {
+                  return (
+                    <textarea
+                      key={field.name}
+                      name={field.name}
+                      placeholder={field.placeholder}
+                      rows={field.rows}
+                      className="w-full p-3 bg-gray-800 rounded"
+                      required={field.required}
+                    />
+                  );
+                }
+
+                return (
+                  <input
+                    key={field.name}
+                    type={field.type}
+                    name={field.name}
+                    placeholder={field.placeholder}
+                    className="w-full p-3 bg-gray-800 rounded"
+                    required={field.required}
+                  />
+                );
+              })}
               <button
                 type="submit"
                 className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full transition-colors"
               >
-                Send Message
+                {content.contact.form.submitLabel}
               </button>
             </motion.form>
           </motion.div>
@@ -321,8 +271,8 @@ export default function index() {
 
       <footer className="bg-gray-900 py-6 px-4 text-center text-gray-400">
         <p>
-          &copy; {new Date().getFullYear()} Syed Gohar Ali Naqvi. All rights
-          reserved.
+          &copy; {new Date().getFullYear()} {content.meta.copyrightName}. All
+          rights reserved.
         </p>
       </footer>
     </div>

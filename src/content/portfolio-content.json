@@ -1,0 +1,249 @@
+{
+  "_instructions": {
+    "note": "Edit this file only to update portfolio content. Do not change other code files.",
+    "assetsFolder": "Place image and resume files in src/assets/ and reference filenames in assets section.",
+    "iconKeys": "javascript, typescript, react, redux, firebase, firestore, api, websocket, link, location, android, nodejs, python, git, selenium, mobile, palette, linkedin, github, googlePlay, apple",
+    "emphasisKeys": "bold, blue, purple, gradient",
+    "linkVariants": "linkedin, github, outline",
+    "addExperience": "Add a new object inside experience.items array.",
+    "addProject": "Add a new object inside projects.items array.",
+    "addSkill": "Add a new object inside skills.items array with name and icon.",
+    "storeLinks": "Add full Google Play / App Store URLs in projects.items[].storeLinks[].url to make buttons clickable.",
+    "heroSignals": "Edit hero.subtitle, hero.animation.badge, and hero.animation.type for the spotlight hero."
+  },
+  "meta": {
+    "pageTitle": "Syed Gohar Ali Naqvi | React Native Developer",
+    "favicon": "Logo.webp",
+    "copyrightName": "Syed Gohar Ali Naqvi"
+  },
+  "assets": {
+    "profileImage": "ProfilePic.webp",
+    "resume": "resume/Syed Gohar Ali Naqvi.pdf",
+    "resumeDownloadName": "Syed Gohar Ali Naqvi Resume.pdf"
+  },
+  "hero": {
+    "name": {
+      "line1": "SYED GOHAR ALI",
+      "line2": " NAQVI"
+    },
+    "title": "React Native Developer",
+    "subtitle": "I build mobile apps with real-time features, clean UI, and production-ready architecture.",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/syed-gohar-ali-naqvi-107953361",
+        "icon": "linkedin",
+        "variant": "linkedin"
+      },
+      {
+        "label": "Github",
+        "url": "https://github.com/af1848361",
+        "icon": "github",
+        "variant": "github"
+      },
+      {
+        "label": "Download Resume",
+        "type": "resume",
+        "icon": "download",
+        "variant": "outline"
+      }
+    ],
+    "animation": {
+      "enabled": true,
+      "type": "spotlight",
+      "badge": "Available for React Native roles"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "paragraphs": [
+      {
+        "segments": [
+          { "text": "Hello!", "emphasis": "bold" },
+          { "text": " I'm " },
+          { "text": "Syed Gohar Ali Naqvi", "emphasis": "gradient" },
+          { "text": ", a " },
+          { "text": "React Native Developer", "emphasis": "blue" },
+          {
+            "text": " with hands-on experience building and shipping cross-platform mobile applications for Android and iOS. I specialize in crafting intuitive, high-performance apps with responsive layouts and production-ready user experiences."
+          }
+        ]
+      },
+      {
+        "segments": [
+          { "text": "I'm skilled in " },
+          { "text": "React Native", "emphasis": "purple" },
+          { "text": ", " },
+          { "text": "TypeScript", "emphasis": "blue" },
+          { "text": ", " },
+          { "text": "JavaScript", "emphasis": "purple" },
+          { "text": ", " },
+          { "text": "Redux", "emphasis": "blue" },
+          { "text": ", " },
+          { "text": "Firebase Authentication", "emphasis": "purple" },
+          { "text": ", " },
+          { "text": "Firestore", "emphasis": "blue" },
+          { "text": ", " },
+          { "text": "RESTful APIs", "emphasis": "purple" },
+          { "text": ", " },
+          { "text": "deep linking", "emphasis": "blue" },
+          { "text": ", and real-time event-driven features with " },
+          { "text": "WebSocket", "emphasis": "purple" },
+          {
+            "text": ". I focus on reusable UI components, backend integration, production debugging, and close collaboration with backend, QA, and design teams."
+          }
+        ]
+      },
+      {
+        "segments": [
+          { "text": "I am currently pursuing a " },
+          {
+            "text": "Bachelor's in Business & Information Technology",
+            "emphasis": "blue"
+          },
+          {
+            "text": " at Virtual University of Pakistan, combining business fundamentals with strong technical acumen. I take pride in writing clean, modular code and solving complex logic issues in live production environments."
+          }
+        ]
+      },
+      {
+        "segments": [
+          {
+            "text": "From real-time event check-ins to shipped consumer apps on Google Play and the App Store, I bring practical mobile development experience to every project. "
+          },
+          { "text": "Let's connect", "emphasis": "blue" },
+          { "text": " and build something great!" }
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "items": [
+      { "name": "JavaScript", "icon": "javascript" },
+      { "name": "TypeScript", "icon": "typescript" },
+      { "name": "React Native", "icon": "react" },
+      { "name": "Redux", "icon": "redux" },
+      { "name": "Firebase", "icon": "firebase" },
+      { "name": "Firestore", "icon": "firestore" },
+      { "name": "REST APIs", "icon": "api" },
+      { "name": "WebSocket", "icon": "websocket" },
+      { "name": "Deep Linking", "icon": "link" },
+      { "name": "Node.js", "icon": "nodejs" },
+      { "name": "Python", "icon": "python" },
+      { "name": "Git", "icon": "git" },
+      { "name": "Selenium", "icon": "selenium" },
+      { "name": "Responsive UI", "icon": "mobile" },
+      { "name": "UI/UX", "icon": "palette" }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "items": [
+      {
+        "title": "React Native Developer",
+        "organization": "goodtogo",
+        "startDate": "Jan 2026",
+        "endDate": "Present",
+        "highlights": [
+          "Building a real-time event and venue check-in feature using WebSocket, where QR-code scans trigger instant no-reload updates on the paired user screen.",
+          "Implemented one-QR-per-entry validation across connected clients to reduce duplicate or invalid check-ins in live event flows.",
+          "Integrated WebSocket-based real-time communication into an existing React Native + Firebase architecture, extending prior REST-only API communication.",
+          "Collaborating with backend engineers to define client-side state handling for live event updates, connection changes, and real-time UI behavior."
+        ]
+      },
+      {
+        "title": "React Native Developer",
+        "organization": "Balawal IT House (BITH)",
+        "startDate": "Aug 2024",
+        "endDate": "Dec 2025",
+        "highlights": [
+          "Developed cross-platform mobile applications in React Native with responsive layouts and consistent user experience across device sizes.",
+          "Built clean, modular, and reusable UI components following React Native best practices and maintainable component architecture.",
+          "Integrated RESTful APIs and backend services into mobile screens while coordinating with designers, backend developers, and QA engineers.",
+          "Implemented Firebase Authentication for secure sign-in flows and Firestore Database for real-time synchronization and reliable app data storage.",
+          "Used Redux and TypeScript patterns to manage frontend state, improve code maintainability, and reduce UI logic complexity.",
+          "Diagnosed and resolved UI/UX issues, layout bugs, and logic errors to keep mobile screens smooth, responsive, and production-ready.",
+          "Participated in peer code reviews and followed industry-standard coding conventions for clean, scalable code."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Live Mobile App",
+    "items": [
+      {
+        "title": "Strangerus",
+        "organization": "Live Android & iOS App",
+        "highlights": [
+          "Built and shipped a production mobile app available on Google Play and the Apple App Store, focused on location-based discovery, check-ins, events, and real-world networking.",
+          "Worked on mobile flows for user interaction, event discovery, connection requests, responsive screens, and app-ready frontend integration.",
+          "Applied React Native, Firebase, API integration, state management, and mobile UI/UX practices to support a live product experience."
+        ],
+        "storeLinks": [
+          {
+            "label": "Available on Google Play",
+            "icon": "googlePlay",
+            "url": "https://play.google.com/store/apps/details?id=com.strangerus&hl=en"
+          },
+          {
+            "label": "Available on App Store",
+            "icon": "apple",
+            "url": "https://apps.apple.com/pk/app/strangerus/id6751816806"
+          }
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "items": [
+      {
+        "title": "Bachelor of Science, Business & Information Technology",
+        "organization": "Virtual University of Pakistan",
+        "startDate": "Apr 2023",
+        "endDate": "Apr 2027 (Expected)",
+        "highlights": [
+          "Currently pursuing a Bachelor of Science in Business & Information Technology, combining business fundamentals with modern software development.",
+          "Studying information systems, database management, and technology-driven business improvement alongside hands-on programming.",
+          "Applying software engineering and web development concepts to build practical, business-oriented technical solutions."
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Me",
+    "email": "ga741741@gmail.com",
+    "emailSubject": "Contact From Portfolio",
+    "emailBody": "Hi Gohar,\nI visited your portfolio and wanted to reach out to you.",
+    "phone": "+923041038639",
+    "whatsappUrl": "https://wa.me/+923041038639",
+    "location": "Daska, Sialkot Pakistan",
+    "form": {
+      "action": "https://formspree.io/f/mjkrqyvd",
+      "method": "POST",
+      "submitLabel": "Send Message",
+      "fields": [
+        {
+          "name": "name",
+          "type": "text",
+          "placeholder": "Your Name",
+          "required": true
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "placeholder": "Your Email",
+          "required": true
+        },
+        {
+          "name": "message",
+          "type": "textarea",
+          "placeholder": "Your Message",
+          "rows": 4,
+          "required": true
+        }
+      ]
+    }
+  }
+}

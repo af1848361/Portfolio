@@ -19,7 +19,15 @@ export default function index({ Mainvariant, SecondVariant, JobTitle, CompanyNam
             >
                 <h3 className="text-xl font-bold">{JobTitle}</h3>
                 <p className={[EducationPart ? 'text-purple-400' : "text-blue-400"]}>
-                    {CompanyName} | {Start} {Start ? '-' : ''}  {End ? End : 'Present'}
+                    {CompanyName}
+                    {(Start || End) && (
+                        <>
+                            {" | "}
+                            {Start}
+                            {Start && " - "}
+                            {End || "Present"}
+                        </>
+                    )}
                 </p>
                 <ul className="list-disc pl-6 mt-2 space-y-1">
                     {ListOfResposibilities.map((each, index) => {
